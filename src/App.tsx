@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ArrayOfObjects from './components/useState/arrayOfObjects/arrayOfObjects';
+import ObjectUseState from './components/useState/object/objectUseState';
+import ArrayUseState from './components/useState/array/arrayUseState';
+  function App() {
+    const list = ["Keyboards","Mouse","Fan"]
+    const item = {
+      name : "RedBull",
+      category : "Beverages"
+    };
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
+    const stock = [{
+      name : "Apple",
+      category : "Fruits"
+    }, 
+    {
+      name : "Carrot",
+      category:"Vegetables"
+    },
+    {
+      name : "Ginger",
+      category:"Vegetables"
+    }
+    ]
+    return (
+    <>
+    <ObjectUseState item = {item}/>
+    <ArrayOfObjects stocks = {stock}/>
+    <ArrayUseState lists = {list}/>
+    </>
+    );
+  }
 export default App;
