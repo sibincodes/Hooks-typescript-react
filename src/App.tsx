@@ -1,6 +1,7 @@
-import ArrayOfObjects from './components/useState/arrayOfObjects/arrayOfObjects';
-import ObjectUseState from './components/useState/object/objectUseState';
-import ArrayUseState from './components/useState/array/arrayUseState';
+import ArrayOfObjects from './components/props/arrayOfObjects/arrayOfObjects';
+import ObjectUseState from './components/props/object/objectUseState';
+import ArrayUseState from './components/props/array/arrayUseState';
+import EventProps from './components/props/eventprops/eventprops';
   function App() {
     const list = ["Keyboards","Mouse","Fan"]
     const item = {
@@ -26,6 +27,9 @@ import ArrayUseState from './components/useState/array/arrayUseState';
     <ObjectUseState item = {item}/>
     <ArrayOfObjects stocks = {stock}/>
     <ArrayUseState lists = {list}/>
+    <EventProps handleClick = {(event,id)=> {
+      console.log('Button Clicked',event,id);
+    }}/>
     </>
     );
   }

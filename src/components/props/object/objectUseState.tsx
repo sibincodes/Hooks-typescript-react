@@ -11,7 +11,7 @@ const objectUseState = (props:objectUseStateProps) => {
        <h3>
        Selected Item is {props.item.name}
        </h3>
-       </div>
+    </div>
     </div>
   );
 }
